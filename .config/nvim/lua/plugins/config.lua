@@ -2,7 +2,6 @@ return {
 
   { "EdenEast/nightfox.nvim" },
   { "rcarriga/nvim-notify", enabled = false },
-  { "echasnovski/mini.surround", enabled = true },
   {
     "echasnovski/mini.files",
     enabled = true,
@@ -15,11 +14,26 @@ return {
       },
     },
   },
+  {
+    "echasnovski/mini.surround",
+    opts = {
+      mappings = {
+        add = "ga",
+        delete = "gzd", -- Delete surrounding
+        find = "gff", -- Find surrounding (to the right)
+        find_left = "gzF", -- Find surrounding (to the left)
+        highlight = "gzh", -- Highlight surrounding
+        replace = "gzr", -- Replace surrounding
+        update_n_lines = "gzn", -- Update `n_lines`
+      },
+    },
+    enabled = true,
+  },
   { "mfussenegger/nvim-dap-python", enabled = true },
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "Carbonfox",
+      colorscheme = "carbonfox",
     },
   },
   {
