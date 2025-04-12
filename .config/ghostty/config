@@ -1,0 +1,4 @@
+theme = "carbonfox"
+shell-integration = fish
+command = /opt/homebrew/bin/fish --login --interactive
+confirm-close-surface = false
