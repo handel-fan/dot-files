@@ -1,0 +1,11 @@
+# This file contains fish universal variable definitions.
+# VERSION: 3.0
+SETUVAR --export EDITOR:\x1d
+SETUVAR --export ZATHURA_PLUGINS_DIR:/opt/homebrew/Cellar/zathura\x2dpdf\x2dpoppler/2026\x2e02\x2e03
+SETUVAR --export --path ZATHURA_PLUGIN_PATH:/opt/homebrew/Cellar/zathura\x2dpdf\x2dpoppler/2026\x2e02\x2e03
+SETUVAR __fish_initialized:4300
+SETUVAR dls:/Users/handelmac/Downloads
+SETUVAR --export dropbox_dir:/Users/handelmac/Dropbox
+SETUVAR --export fish_dir:/Users/handelmac/\x2econfig/fish
+SETUVAR fish_user_paths:/Users/handelmac/\x2eghcup/bin\x1e/opt/homebrew/anaconda3/bin\x1e/opt/homebrew/Caskroom/anaconda\x1e/Users/handelmac/Library/Python/3\x2e9/bin\x1e/Users/handelmac/Downloads/nvim\x2dmacos\x2darm64/bin\x1e/usr/local/texlive/2025basic/bin/universal\x2ddarwin\x1e/Applications/Ghostty\x2eapp/Contents/MacOS
+SETUVAR --export working_commit:8cae522d9ad1fbb311227b1c1ec8d28fbd3e6e9d
