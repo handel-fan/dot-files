@@ -2,4 +2,5 @@ set selection-clipboard clipboard
 set window-height 3000
 set window-width 3000
 set adjust-open "width"
-
+map h scroll full-up
+map l scroll full-down

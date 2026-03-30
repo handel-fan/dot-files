@@ -161,3 +161,43 @@ end
 function drp
     cd ~/Dropbox/
 end
+
+function pwc
+    pwd | pbcopy
+end
+
+function fdf
+    fd | rg $argv
+end
+
+function get_gitignore_path
+    echo (git rev-parse --show-toplevel)/.gitignore
+end
+
+function edgitignore
+    nvim (get_gitignore_path)
+end
+
+function edgin
+    edgitignore
+end
+
+function add_latex_gitignore
+    set path (get_gitignore_path); or return 1
+    set template ~/.config/fish/gitignore_templates/latex.gitignore
+    set token "# >>> latex gitignore >>>"
+
+    # If token already exists → abort
+    if grep -qF "$token" $path
+        echo "latex gitignore already added - NOT ADDING"
+        return 1
+    end
+
+    # Append token + contents
+    echo "" >>$path
+    echo $token >>$path
+    cat $template >>$path
+    echo "# <<< latex gitignore <<<" >>$path
+
+    echo "latex gitignore added"
+end

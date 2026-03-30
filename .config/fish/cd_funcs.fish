@@ -43,6 +43,10 @@ function efp
     cd /Users/handelmac/handelmac_house/uml_handel/efp/
 end
 
+function efp
+    cd /Users/handelmac/handelmac_house/uml_handel/efp/
+end
+
 function csr
     set csr_dir ~/handelmac_house/uml_handel/csrsrch
 
@@ -66,4 +70,11 @@ end
 
 function dllmfin
     cd /Users/handelmac/handelmac_house/uml_handel/dllm_final_project/COMP-5300-JEGAN-DAN-EDIT-CORPUS
+end
+
+function notes
+    cd ~/notes
+end
+function tre
+    command tre $argv -e; and source /tmp/tre_aliases_$USER ^/dev/null
 end

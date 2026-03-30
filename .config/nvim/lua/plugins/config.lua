@@ -1,34 +1,49 @@
 return {
 
-  { "EdenEast/nightfox.nvim" },
-  { "rcarriga/nvim-notify", enabled = false },
-  { "echasnovski/mini.surround", enabled = true },
-  {
-    "echasnovski/mini.files",
-    enabled = true,
-    keys = {
-      { "<leader>e", "<cmd>lua MiniFiles.open()<cr>", desc = "Mini Files" },
-    },
-    opts = {
-      options = {
-        permanent_delete = false,
-      },
-    },
-  },
-  { "mfussenegger/nvim-dap-python", enabled = true },
-  {
-    "LazyVim/LazyVim",
-    opts = {
-      colorscheme = "Carbonfox",
-    },
-  },
-  {
-    "stevearc/conform.nvim",
-    opts = {
-      formatters_by_ft = {
-        typescript = { "prettier", stop_after_first = true },
-        typescriptreact = { "prettier", stop_after_first = true },
-      },
-    },
-  },
+	{ "EdenEast/nightfox.nvim" },
+	{ "rcarriga/nvim-notify", enabled = false },
+	{ "nvim-mini/mini.surround", enabled = true },
+	{
+		"nvim-mini/mini.files",
+		enabled = true,
+		keys = {
+			{ "<leader>e", "<cmd>lua MiniFiles.open()<cr>", desc = "Mini Files" },
+			{ "<leader>E", "<cmd>lua MiniFiles.open()<cr>", desc = "Mini Files" },
+		},
+		opts = {
+			options = {
+				permanent_delete = false,
+			},
+		},
+	},
+	{ "mfussenegger/nvim-dap-python", enabled = true },
+	{
+		"LazyVim/LazyVim",
+		opts = {
+			colorscheme = "Carbonfox",
+		},
+	},
+	{
+		"stevearc/conform.nvim",
+		opts = {
+			formatters_by_ft = {
+				typescript = { "prettier", stop_after_first = true },
+				typescriptreact = { "prettier", stop_after_first = true },
+			},
+		},
+	},
+	{
+		"zbirenbaum/copilot.lua",
+		opts = {
+			suggestion = { enabled = false },
+			panel = { enabled = false },
+		},
+		config = function(_, opts)
+			require("copilot").setup(opts)
+			vim.cmd("Copilot disable")
+		end,
+	},
+	{
+		"editorconfig/editorconfig-vim",
+	},
 }

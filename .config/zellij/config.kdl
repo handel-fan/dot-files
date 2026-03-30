@@ -7,6 +7,7 @@ keybinds clear-defaults=true {
     bind "Alt w" {CloseTab;}
     bind "Alt r" { SwitchToMode "RenameTab"; TabNameInput 0; }
     unbind "Alt Right"
+    unbind "Ctrl g"
 
 
     // ---- PANE MODE ----
