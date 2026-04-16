@@ -1,0 +1,13 @@
+layout {
+  tab name="telemetry+buildlog" {
+    pane split_direction="vertical" {
+      pane size="55%" {
+        command "bash" "-lc" "cd \"$WORKDIR\" && ./telemetry.sh 2>&1 | tee \"$RUN_DIR/telemetry.log\""
+      }
+      pane {
+        command "bash" "-lc" "echo \"Tailing: $RUN_DIR/build.log\"; touch \"$RUN_DIR/build.log\"; tail -n 200 -f \"$RUN_DIR/build.log\""
+      }
+    }
+  }
+}
+

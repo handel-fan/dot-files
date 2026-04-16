@@ -1,0 +1,21 @@
+layout {
+  default_tab_template {
+    pane size=1 borderless=true {
+      plugin location="zellij:tab-bar";
+    }
+
+    children
+
+    pane size=2 borderless=true {
+      plugin location="zellij:status-bar";
+    }
+  }
+
+  tab name="nvim" {
+    pane cwd="/home/handel/handel_house/tuts/waiig_code_1.3/monkey02" {
+      command "fish"
+      args "-i" "-C" "nvim"
+    }
+  }
+}
+
