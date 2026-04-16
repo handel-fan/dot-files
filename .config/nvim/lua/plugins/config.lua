@@ -1,9 +1,21 @@
 return {
-
+  {
+    "kdheepak/lazygit.nvim",
+    lazy = false,
+  },
+  {
+    "lervag/vimtex",
+    lazy = false,
+    init = function()
+      vim.g.vimtex_view_method = "zathura" -- or "sioyek", "skim", etc.
+      vim.g.vimtex_compiler_method = "latexmk"
+    end,
+  },
+  { "folke/noice.nvim", enabled = false },
   { "EdenEast/nightfox.nvim" },
   { "rcarriga/nvim-notify", enabled = false },
   {
-    "echasnovski/mini.files",
+    "nvim-mini/mini.files",
     enabled = true,
     keys = {
       { "<leader>e", "<cmd>lua MiniFiles.open()<cr>", desc = "Mini Files" },
@@ -15,7 +27,7 @@ return {
     },
   },
   {
-    "echasnovski/mini.surround",
+    "nvim-mini/mini.surround",
     opts = {
       mappings = {
         add = "ga",
@@ -33,7 +45,7 @@ return {
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "carbonfox",
+      colorscheme = "duskfox",
     },
   },
   {
@@ -44,5 +56,32 @@ return {
         typescriptreact = { "prettier", stop_after_first = true },
       },
     },
+  },
+  {
+    "lervag/vimtex",
+    lazy = false, -- we don't want to lazy load VimTeX
+    -- tag = "v2.15", -- uncomment to pin to a specific release
+    init = function()
+      -- VimTeX configuration goes here, e.g.
+      vim.g.vimtex_view_method = "zathura"
+    end,
+  },
+  { "ggandor/flit.nvim", enabled = false },
+  {
+    "stevearc/oil.nvim",
+    keys = {
+      {
+        "<leader>o",
+        function()
+          require("oil").open()
+        end,
+        desc = "Open Oil",
+      },
+    },
+    opts = {},
+  },
+  {
+    "shrynx/line-numbers.nvim",
+    opts = {},
   },
 }

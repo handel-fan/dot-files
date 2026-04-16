@@ -32,3 +32,7 @@ vim.api.nvim_set_keymap("n", "gI", "gI:normal! zz<CR>", opts)
 vim.api.nvim_set_keymap("n", "<leader>ms", "ccset script_dir (dirname (status --current-filename))", opts)
 vim.api.nvim_set_keymap("n", "<leader>fpa", "<cmd>lua copy_full_path()<CR>", { desc = "Copy full path to clipboard" })
 vim.api.nvim_set_keymap("n", "<leader>fpf", "<cmd>lua copy_filename()<CR>", { desc = "Copy filename to clipboard" })
+
+vim.keymap.set("n", "<leader>y", '"+y', { desc = "Yank to system clipboard", remap = true })
+vim.keymap.set("v", "<leader>y", '"+y', { desc = "Yank selection to system clipboard", remap = true })
+vim.keymap.set("n", "<leader>Y", '"+Y', { desc = "Yank line to system clipboard" })
