@@ -327,8 +327,8 @@ theme "nightfox"
 // The name of the default layout to load on startup
 // Default: "default"
 // 
-default_layout "top-tabs" 
-
+layout_dir "/home/handel/.config/zellij/layouts"
+default_layout "top_tabs"
 // The folder in which Zellij will look for layouts
 // (Requires restart)
 // 

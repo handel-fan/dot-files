@@ -79,6 +79,7 @@ return {
       },
     },
     opts = {},
+    lazy = false,
   },
   {
     "shrynx/line-numbers.nvim",

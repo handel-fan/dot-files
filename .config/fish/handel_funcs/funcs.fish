@@ -330,7 +330,7 @@ function perfmnce
     sudo cpupower frequency-set -g performance
 end
 
-function zel
+function zl
     zellij
 end
 
