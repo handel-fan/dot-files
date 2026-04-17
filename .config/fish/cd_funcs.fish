@@ -57,14 +57,16 @@ function csr
     end
 end
 function edz
-    nvim ~/.config/zellij/config.kdl
+    cd ~/.config/zellij
+    set zel_dirs (fd -t f)
+    nvim $zel_dirs
 end
 
 function dllm
     cd ~/handelmac_house/uml_handel/deep_llms/
 end
 
-function zel
+function zl
     zellij
 end
 
@@ -77,4 +79,16 @@ function notes
 end
 function tre
     command tre $argv -e; and source /tmp/tre_aliases_$USER ^/dev/null
+end
+
+function auditory_ecstasies
+    cd /Users/handelmac/Dropbox/notes/music/auditory_ecstasies
+end
+
+function aud
+    auditory_ecstasies
+end
+
+function dlf
+    dllmfin
 end

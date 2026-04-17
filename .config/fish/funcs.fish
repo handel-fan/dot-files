@@ -182,22 +182,28 @@ function edgin
     edgitignore
 end
 
-function add_latex_gitignore
-    set path (get_gitignore_path); or return 1
-    set template ~/.config/fish/gitignore_templates/latex.gitignore
-    set token "# >>> latex gitignore >>>"
+function fdrg
+    fd | rg $argv
+end
 
-    # If token already exists → abort
-    if grep -qF "$token" $path
-        echo "latex gitignore already added - NOT ADDING"
-        return 1
-    end
+function umass_lowell_gpu1
+    ssh jsivakas@cs-gpu1.cs.uml.edu
+end
+function umass_lowell_gpu2
+    ssh jsivakas@cs-gpu2.cs.uml.edu
+end
 
-    # Append token + contents
-    echo "" >>$path
-    echo $token >>$path
-    cat $template >>$path
-    echo "# <<< latex gitignore <<<" >>$path
+function gpu1
+    umass_lowell_gpu1
+end
+function gpu2
+    umass_lowell_gpu2
+end
 
-    echo "latex gitignore added"
+function nf
+    n (fzf)
+end
+
+function edr
+    nvim ~/.config/ranger/rc.conf
 end

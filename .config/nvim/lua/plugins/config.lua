@@ -46,4 +46,26 @@ return {
 	{
 		"editorconfig/editorconfig-vim",
 	},
+	{ "glacambre/firenvim", build = ":call firenvim#install(0)" },
+	{
+		"echasnovski/mini.map",
+		version = "*",
+		config = function()
+			local map = require("mini.map")
+
+			map.setup({
+				symbols = {
+					encode = map.gen_encode_symbols.dot("4x2"),
+				},
+			})
+
+			-- optional: open automatically
+			map.open()
+
+			-- toggle key
+			vim.keymap.set("n", "<leader>mm", function()
+				map.toggle()
+			end, { desc = "Toggle minimap" })
+		end,
+	},
 }
