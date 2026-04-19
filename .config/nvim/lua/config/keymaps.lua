@@ -5,13 +5,13 @@
 local opts = { noremap = true, silent = true }
 
 local function copy_full_path()
-  local full_path = vim.fn.expand("%:p")
-  vim.fn.setreg("+", full_path)
+	local full_path = vim.fn.expand("%:p")
+	vim.fn.setreg("+", full_path)
 end
 
 local function copy_filename()
-  local filename = vim.fn.expand("%:t")
-  vim.fn.setreg("+", filename)
+	local filename = vim.fn.expand("%:t")
+	vim.fn.setreg("+", filename)
 end
 
 _G.copy_full_path = copy_full_path

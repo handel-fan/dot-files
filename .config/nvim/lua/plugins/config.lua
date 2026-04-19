@@ -48,7 +48,21 @@ return {
 	},
 	{ "glacambre/firenvim", build = ":call firenvim#install(0)" },
 	{
-		"echasnovski/mini.map",
+		"stevearc/oil.nvim",
+		keys = {
+			{
+				"<leader>o",
+				function()
+					require("oil").open()
+				end,
+				desc = "Open Oil",
+			},
+		},
+		opts = {},
+		lazy = false,
+	},
+	{
+		"nvim-mini/mini.map",
 		version = "*",
 		config = function()
 			local map = require("mini.map")
@@ -67,5 +81,24 @@ return {
 				map.toggle()
 			end, { desc = "Toggle minimap" })
 		end,
+	},
+	{
+		"gbprod/substitute.nvim",
+		opts = {
+			-- your configuration comes here
+			-- or leave it empty to use the default settings
+			-- refer to the configuration section below
+		},
+	},
+	{
+		"folke/flash.nvim",
+		enabled = false,
+	},
+	{
+		"nvim-telescope/telescope.nvim",
+		keys = {
+			{ "<leader><space>", false },
+			{ "<leader><space>", LazyVim.pick("files", { root = false }), desc = "Find Files (cwd)" },
+		},
 	},
 }

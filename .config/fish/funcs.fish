@@ -207,3 +207,15 @@ end
 function edr
     nvim ~/.config/ranger/rc.conf
 end
+
+function oil
+    nvim -c Oil
+end
+
+function yadm_lazygit
+    lazygit --git-dir (yadm rev-parse --git-dir) --work-tree ~
+end
+
+function ylz
+    yadm_lazygit
+end
