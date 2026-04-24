@@ -201,7 +201,7 @@ function gpu2
 end
 
 function nf
-    n (fzf)
+    n (fd | fzf)
 end
 
 function edr
@@ -218,4 +218,23 @@ end
 
 function ylz
     yadm_lazygit
+end
+
+function iwantit
+    eval $argv 2>&1 | tee /dev/tty | pbcopy
+end
+
+function swb
+    SwitchAudioSource -s "Bose QC Ultra Headphones" -t output
+end
+
+function swc
+    SwitchAudioSource -s "Clarett+ 8Pre" -t output
+end
+function gsm
+    git switch main
+end
+
+function lzy
+    lazygit --git-dir (yadm rev-parse --git-dir) --work-tree ~
 end

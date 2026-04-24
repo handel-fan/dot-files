@@ -84,11 +84,17 @@ return {
 	},
 	{
 		"gbprod/substitute.nvim",
-		opts = {
-			-- your configuration comes here
-			-- or leave it empty to use the default settings
-			-- refer to the configuration section below
-		},
+		lazy = false,
+		config = function()
+			local substitute = require("substitute")
+
+			substitute.setup({})
+
+			vim.keymap.set("n", "s", substitute.operator, { noremap = true })
+			vim.keymap.set("n", "ss", substitute.line, { noremap = true })
+			vim.keymap.set("n", "S", substitute.eol, { noremap = true })
+			vim.keymap.set("x", "s", substitute.visual, { noremap = true })
+		end,
 	},
 	{
 		"folke/flash.nvim",

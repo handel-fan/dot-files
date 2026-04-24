@@ -9,6 +9,7 @@ set -Ux ZATHURA_PLUGINS_DIR /opt/homebrew/Cellar/zathura-pdf-poppler/2026.02.03
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
 set -gx EDITOR nvim
+set -gx RIPGREP_CONFIG_PATH /Users/handelmac/.config/.ripgreprc
 source $fish_dir/cd_funcs.fish
 source $fish_dir/funcs.fish
 fish_vi_key_bindings
