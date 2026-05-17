@@ -13,7 +13,7 @@ set -gx RIPGREP_CONFIG_PATH /Users/handelmac/.config/.ripgreprc
 source $fish_dir/cd_funcs.fish
 source $fish_dir/funcs.fish
 fish_vi_key_bindings
-# 
+fzf --fish | source
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
 # i test -f /opt/homebrew/anaconda3/bin/conda

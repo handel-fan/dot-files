@@ -107,4 +107,32 @@ return {
 			{ "<leader><space>", LazyVim.pick("files", { root = false }), desc = "Find Files (cwd)" },
 		},
 	},
+	{
+		"stevearc/conform.nvim",
+		opts = {
+			format_on_save = {
+				timeout_ms = 500,
+				lsp_format = "never",
+			},
+
+			formatters_by_ft = {
+				tex = { "latexindent" },
+				plaintex = { "latexindent" },
+				latex = { "latexindent" },
+
+				typescript = { "prettier", stop_after_first = true },
+				typescriptreact = { "prettier", stop_after_first = true },
+			},
+
+			formatters = {
+				latexindent = {
+					prepend_args = {
+						"-m",
+						"-l",
+						vim.fn.expand("~/.latexindent.yaml"),
+					},
+				},
+			},
+		},
+	},
 }

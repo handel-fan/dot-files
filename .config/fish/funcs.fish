@@ -238,3 +238,27 @@ end
 function lzy
     lazygit --git-dir (yadm rev-parse --git-dir) --work-tree ~
 end
+
+function cpy
+    $argv 2>&1 | tee /dev/tty | pbcopy
+end
+
+function ltxmke
+    set out /tmp/latexmk-errors.txt
+
+    latexmk -g -pdf main_backup_04_25.tex >$out 2>&1
+
+    cat $out
+    command pbcopy <$out
+
+    echo "Copied latexmk output to clipboard."
+end
+
+function todo
+    nvim /Users/handelmac/notes/todo/todo.md
+end
+
+function dp
+    cd ~/Dropbox/notes
+    nf
+end

@@ -94,5 +94,23 @@ function dlf
 end
 
 function pmm
-    /Users/handelmac/handelmac_house/uml_handel/efp/final_project/pmm
+    cd /Users/handelmac/handelmac_house/uml_handel/efp/final_project/pmm
+end
+
+function latex_doc_dir
+    cd /Users/handelmac/handelmac_house/uml_handel/dllm_final_project/COMP-5300-JEGAN-DAN-EDIT-CORPUS/docs/main_04_25/
+end
+function drp
+    cd ~/Dropbox/
+end
+function drpn
+    cd ~/Dropbox/notes
+end
+
+function slides
+    cd /Users/handelmac/handelmac_house/uml_handel/submit_efp_final/efp_final/writeup/slides
+end
+
+function hormozi
+    n ~/Dropbox/notes/improvements/hormozi_quotes.md
 end
