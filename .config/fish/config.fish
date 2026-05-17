@@ -21,3 +21,5 @@ end
 for file in $fish_dir/handel_funcs/*
     source $file
 end
+
+set -q GHCUP_INSTALL_BASE_PREFIX[1]; or set GHCUP_INSTALL_BASE_PREFIX $HOME ; set -gx PATH $HOME/.cabal/bin /home/handel/.ghcup/bin $PATH # ghcup-env

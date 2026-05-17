@@ -64,3 +64,12 @@ function dlfwikied
     cd /home/handel/handel_house/uml_handel/COMP-5300-JEGAN-DAN-EDIT-CORPUS/data/wiki_edits
     head -n 10 test.jsonl | jq . | batcat
 end
+
+function pmm
+    cd /home/handel/handel_house/uml_handel/efp/final_project/pmm
+end
+
+
+function drp
+    cd ~/Dropbox/
+end
