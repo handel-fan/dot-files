@@ -16,7 +16,6 @@ return {
 			},
 		},
 	},
-	{ "mfussenegger/nvim-dap-python", enabled = true },
 	{
 		"LazyVim/LazyVim",
 		opts = {
@@ -62,25 +61,9 @@ return {
 		lazy = false,
 	},
 	{
-		"nvim-mini/mini.map",
-		version = "*",
-		config = function()
-			local map = require("mini.map")
-
-			map.setup({
-				symbols = {
-					encode = map.gen_encode_symbols.dot("4x2"),
-				},
-			})
-
-			-- optional: open automatically
-			map.open()
-
-			-- toggle key
-			vim.keymap.set("n", "<leader>mm", function()
-				map.toggle()
-			end, { desc = "Toggle minimap" })
-		end,
+		"techwizrd/render-latex.nvim",
+		ft = "markdown",
+		opts = {},
 	},
 	{
 		"gbprod/substitute.nvim",

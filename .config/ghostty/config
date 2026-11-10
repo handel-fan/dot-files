@@ -12,3 +12,5 @@ shell-integration-features = sudo
 mouse-hide-while-typing = true
 term = xterm-256color
 clipboard-read = allow
+keybind = cmd+q>cmd+q=quit
+keybind = cmd+w>cmd+w=close_surface
