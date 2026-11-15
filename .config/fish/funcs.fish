@@ -250,10 +250,13 @@ function iwantit
         | pbcopy
 end
 
-function swb
+function switch_to_bose
     SwitchAudioSource \
         -s "Bose QC Ultra Headphones" \
         -t output
+end
+function swb
+    switch_to_bose
 end
 
 function swc
@@ -456,4 +459,37 @@ function remind_every_week_update
         mkdir -p (dirname $timestamp_file_path)
         touch $timestamp_file_path
     end
+end
+
+function edit_work_logs
+    cd /Users/handelmac/Dropbox/notes/work_logs; or return
+    set -l latest (printf '%s\n' *.md | gsort -V | tail -n 1)
+    test -n "$latest"; and nvim "$latest"
+end
+
+function ff
+    set -l fn (functions --names | fzf)
+    if test -n "$fn"
+        $fn
+    end
+end
+
+function cubase_riffs --description "Open or create the current month's Cubase riff project"
+    set -l dir "$HOME/Music/Cubase/riffs"
+    set -l template "$dir/riffs_template.cpr"
+    set -l project "$dir/"(date +%Y_%m)".cpr"
+
+    if not test -f "$project"
+        if not test -f "$template"
+            echo "Template not found: $template" >&2
+            return 1
+        end
+
+        cp "$template" "$project"; or return 1
+        echo "Created: $project"
+    else
+        echo "Existing: $project"
+    end
+
+    open "$project"
 end

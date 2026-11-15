@@ -179,3 +179,9 @@ function handel_cd_resume
 end
 
 alias resume='handel_cd_resume'
+
+function cd_work_logs
+    cd /Users/handelmac/Dropbox/notes/work_logs
+end
+
+alias wklgs='cd_work_logs'
