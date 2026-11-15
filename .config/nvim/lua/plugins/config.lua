@@ -1,6 +1,16 @@
 return {
-
+	{
+		"neovim/nvim-lspconfig",
+		opts = {
+			servers = {
+				ltex_plus = {
+					filetypes = { "markdown", "tex", "plaintex" },
+				},
+			},
+		},
+	},
 	{ "EdenEast/nightfox.nvim" },
+	{ "Mofiqul/vscode.nvim" },
 	{ "rcarriga/nvim-notify", enabled = false },
 	{ "nvim-mini/mini.surround", enabled = true },
 	{
@@ -19,7 +29,7 @@ return {
 	{
 		"LazyVim/LazyVim",
 		opts = {
-			colorscheme = "Carbonfox",
+			colorscheme = "carbonfox",
 		},
 	},
 	{
